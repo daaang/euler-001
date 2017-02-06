@@ -1,2 +1,2 @@
-def sum_of_multiples (ceiling):
+def sum_of_multiples (*args):
     return 0

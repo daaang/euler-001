@@ -13,3 +13,8 @@ class GivenNoFactors (unittest.TestCase):
 
     def test_sum_up_to_1000_is_zero (self):
         assert_that(sum_of_multiples(1000), is_(equal_to(0)))
+
+class GivenFactorOfOne (unittest.TestCase):
+
+    def test_sum_up_to_zero_is_zero (self):
+        assert_that(sum_of_multiples(1, 0), is_(equal_to(0)))
