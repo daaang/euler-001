@@ -34,3 +34,7 @@ class GivenFactorOfOne (SumOfMultiplesTestBase):
 
     def test_sum_below_ten_is_45 (self):
         self.assert_sum(10, 45)
+
+class GivenFactorOfTwo (SumOfMultiplesTestBase):
+
+    factors = [2]
