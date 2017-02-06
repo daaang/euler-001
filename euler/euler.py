@@ -1,11 +1,11 @@
 class MultipleSummer:
 
-    def __init__ (self, *args):
-        self.factors = list(args)
-        self.ceiling = self.factors.pop()
+    def __init__ (self, factors):
+        self.factors = factors
         self.remove_invalid_factors()
 
-    def __call__ (self):
+    def __call__ (self, ceiling):
+        self.ceiling = ceiling
         return sum(self.unique_multiples_under_ceiling())
 
     def remove_invalid_factors (self):
@@ -32,5 +32,8 @@ class MultipleSummer:
         return all(n % f != 0 for f in self.mutable_factors)
 
 def sum_of_multiples (*args):
-    x = MultipleSummer(*args)
-    return x()
+    factors = list(args)
+    ceiling = factors.pop()
+
+    summer = MultipleSummer(factors)
+    return summer(ceiling)
