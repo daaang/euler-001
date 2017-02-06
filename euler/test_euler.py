@@ -38,3 +38,6 @@ class GivenFactorOfOne (SumOfMultiplesTestBase):
 class GivenFactorOfTwo (SumOfMultiplesTestBase):
 
     factors = [2]
+
+    def test_sum_below_two_is_zero (self):
+        self.assert_sum(2, 0)
