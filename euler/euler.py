@@ -12,12 +12,12 @@ class MultipleSummer:
 
         while factors:
             factor = factors.pop(0)
-            yield from range_without_duplicates(self.ceiling, factor, factors)
+            yield from self.range_without_duplicates(factor, factors)
 
-def range_without_duplicates (ceiling, factor, factors):
-    for i in range(0, ceiling, factor):
-        if all(i%j != 0 for j in factors):
-            yield i
+    def range_without_duplicates (self, factor, factors):
+        for i in range(0, self.ceiling, factor):
+            if all(i%j != 0 for j in factors):
+                yield i
 
 def sum_of_multiples (*args):
     x = MultipleSummer(*args)
