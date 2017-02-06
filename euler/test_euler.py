@@ -28,6 +28,11 @@ class GivenFactorOfZero (GivenNoFactors):
     # like if there were no factors.
     factors = [0]
 
+class GivenNegativeFactors (GivenNoFactors):
+
+    # Negative factors should also be ignored.
+    factors = [-4, -9]
+
 class GivenFactorOfOne (SumOfMultiplesTestBase):
 
     factors = [1]

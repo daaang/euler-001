@@ -11,7 +11,7 @@ class MultipleSummer:
     def remove_invalid_factors (self):
         valid_factors = []
         for factor in self.factors:
-            if factor != 0:
+            if factor > 0:
                 valid_factors.append(factor)
         self.factors = valid_factors
 
