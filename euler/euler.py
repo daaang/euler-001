@@ -15,5 +15,3 @@ def sum_of_multiples (*args):
     ceiling = factors.pop()
 
     return sum(unique_multiples_under_ceiling(ceiling, factors))
-
-    return result
