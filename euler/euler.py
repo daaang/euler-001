@@ -17,9 +17,12 @@ class MultipleSummer:
             yield from self.get_multiples_of(factor)
 
     def get_multiples_of (self, factor):
-        for i in range(0, self.ceiling, factor):
+        for i in self.all_multiples_under_ceiling(factor):
             if all(i%j != 0 for j in self.mutable_factors):
                 yield i
+
+    def all_multiples_under_ceiling (self, factor):
+        return range(0, self.ceiling, factor)
 
 def sum_of_multiples (*args):
     x = MultipleSummer(*args)
