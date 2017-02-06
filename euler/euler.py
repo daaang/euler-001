@@ -9,11 +9,7 @@ class MultipleSummer:
         return sum(self.unique_multiples_under_ceiling())
 
     def remove_invalid_factors (self):
-        valid_factors = []
-        for factor in self.factors:
-            if factor > 0:
-                valid_factors.append(factor)
-        self.factors = valid_factors
+        self.factors = [f for f in self.factors if f > 0]
 
     def unique_multiples_under_ceiling (self):
         self.mutable_factors = list(self.factors)
