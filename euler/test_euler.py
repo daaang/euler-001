@@ -13,27 +13,27 @@ class SumOfMultiplesTestBase (unittest.TestCase):
 
 class GivenNoFactors (SumOfMultiplesTestBase):
 
-    def test_sum_up_to_zero_is_zero (self):
+    def test_sum_below_zero_is_zero (self):
         self.assert_sum(0, 0)
 
-    def test_sum_up_to_one_is_zero (self):
+    def test_sum_below_one_is_zero (self):
         self.assert_sum(1, 0)
 
-    def test_sum_up_to_1000_is_zero (self):
+    def test_sum_below_1000_is_zero (self):
         self.assert_sum(1000, 0)
 
 class GivenFactorOfOne (SumOfMultiplesTestBase):
 
     factors = [1]
 
-    def test_sum_up_to_zero_is_zero (self):
+    def test_sum_below_zero_is_zero (self):
         self.assert_sum(0, 0)
 
-    def test_sum_up_to_one_is_zero (self):
+    def test_sum_below_one_is_zero (self):
         self.assert_sum(1, 0)
 
-    def test_sum_up_to_two_is_one (self):
+    def test_sum_below_two_is_one (self):
         self.assert_sum(2, 1)
 
-    def test_sum_up_to_three_is_three (self):
+    def test_sum_below_three_is_three (self):
         self.assert_sum(3, 3)
