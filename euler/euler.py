@@ -8,16 +8,15 @@ class MultipleSummer:
         return sum(self.unique_multiples_under_ceiling())
 
     def unique_multiples_under_ceiling (self):
-        factors = list(self.factors)
+        self.mutable_factors = list(self.factors)
+        return self.range_without_duplicates()
 
-        while factors:
-            factor = factors.pop(0)
-            yield from self.range_without_duplicates(factor, factors)
-
-    def range_without_duplicates (self, factor, factors):
-        for i in range(0, self.ceiling, factor):
-            if all(i%j != 0 for j in factors):
-                yield i
+    def range_without_duplicates (self):
+        while self.mutable_factors:
+            factor = self.mutable_factors.pop(0)
+            for i in range(0, self.ceiling, factor):
+                if all(i%j != 0 for j in self.mutable_factors):
+                    yield i
 
 def sum_of_multiples (*args):
     x = MultipleSummer(*args)
