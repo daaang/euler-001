@@ -21,9 +21,8 @@ class MultipleSummer:
             yield from self.get_multiples_of(factor)
 
     def get_multiples_of (self, factor):
-        for i in self.all_multiples_under_ceiling(factor):
-            if self.is_not_a_multiple_of_another_factor(i):
-                yield i
+        return (i for i in self.all_multiples_under_ceiling(factor)
+                if self.is_not_a_multiple_of_another_factor(i))
 
     def all_multiples_under_ceiling (self, factor):
         return range(0, self.ceiling, factor)
