@@ -41,3 +41,29 @@ class GivenFactorOfTwo (SumOfMultiplesTestBase):
 
     def test_sum_below_two_is_zero (self):
         self.assert_sum(2, 0)
+
+    def test_sum_below_three_is_two (self):
+        self.assert_sum(3, 2)
+
+    def test_sum_below_ten_is_twenty (self):
+        self.assert_sum(10, 20)
+
+class GivenFactorOfThree (SumOfMultiplesTestBase):
+
+    factors = [3]
+
+    def test_sum_below_two_is_zero (self):
+        self.assert_sum(2, 0)
+
+    def test_sum_below_three_is_zero (self):
+        self.assert_sum(3, 0)
+
+    def test_sum_below_ten_is_18 (self):
+        self.assert_sum(10, 18)
+
+class GivenFactorOfFive (SumOfMultiplesTestBase):
+
+    factors = [5]
+
+    def test_sum_below_ten_is_five (self):
+        self.assert_sum(10, 5)
