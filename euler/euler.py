@@ -1,1 +1,2 @@
-sum_of_multiples = None
+def sum_of_multiples (ceiling):
+    return 0
