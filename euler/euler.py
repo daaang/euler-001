@@ -2,4 +2,4 @@ def sum_of_multiples (*args):
     factors = list(args)
     ceiling = factors.pop()
 
-    return ceiling if factors else 0
+    return sum(range(ceiling+1)) if factors else 0

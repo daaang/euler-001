@@ -31,3 +31,6 @@ class GivenFactorOfOne (SumOfMultiplesTestBase):
 
     def test_sum_up_to_one_is_one (self):
         self.assert_sum(1, 1)
+
+    def test_sum_up_to_two_is_three (self):
+        self.assert_sum(2, 3)
