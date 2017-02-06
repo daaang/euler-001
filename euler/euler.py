@@ -3,15 +3,17 @@ def range_without_duplicates (ceiling, factor, factors):
         if all(i%j != 0 for j in factors):
             yield i
 
+def unique_multiples_under_ceiling (ceiling, factors):
+    factors = list(factors)
+
+    while factors:
+        factor = factors.pop(0)
+        yield from range_without_duplicates(ceiling, factor, factors)
+
 def sum_of_multiples (*args):
     factors = list(args)
     ceiling = factors.pop()
 
-    result = 0
-    while factors:
-        factor = factors.pop(0)
-        result += sum(range_without_duplicates(ceiling,
-                                               factor,
-                                               factors))
+    return sum(unique_multiples_under_ceiling(ceiling, factors))
 
     return result
