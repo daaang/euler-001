@@ -77,3 +77,7 @@ class GivenFactorsOfTwoAndThree (SumOfMultiplesTestBase):
 
     def test_sum_below_four_is_five (self):
         self.assert_sum(4, 5)
+
+    @unittest.skip
+    def test_sum_below_seven_is_fifteen (self):
+        self.assert_sum(7, 15)
