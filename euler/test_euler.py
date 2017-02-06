@@ -22,6 +22,12 @@ class GivenNoFactors (SumOfMultiplesTestBase):
     def test_sum_below_1000_is_zero (self):
         self.assert_sum(1000, 0)
 
+class GivenFactorOfZero (GivenNoFactors):
+
+    # A factor of zero should be ignored, so this should behave just
+    # like if there were no factors.
+    factors = [0]
+
 class GivenFactorOfOne (SumOfMultiplesTestBase):
 
     factors = [1]
