@@ -1,2 +1,5 @@
 def sum_of_multiples (*args):
-    return 0
+    factors = list(args)
+    ceiling = factors.pop()
+
+    return ceiling if factors else 0

@@ -18,3 +18,6 @@ class GivenFactorOfOne (unittest.TestCase):
 
     def test_sum_up_to_zero_is_zero (self):
         assert_that(sum_of_multiples(1, 0), is_(equal_to(0)))
+
+    def test_sum_up_to_one_is_one (self):
+        assert_that(sum_of_multiples(1, 1), is_(equal_to(1)))
