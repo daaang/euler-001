@@ -80,3 +80,10 @@ class GivenFactorsOfTwoAndThree (SumOfMultiplesTestBase):
 
     def test_sum_below_seven_is_fifteen (self):
         self.assert_sum(7, 15)
+
+class GivenFactorsOfThreeAndFive (SumOfMultiplesTestBase):
+
+    factors = [3, 5]
+
+    def test_sum_below_1000_is_233168 (self):
+        self.assert_sum(1000, 233168)
